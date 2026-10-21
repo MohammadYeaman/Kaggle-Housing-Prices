@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle Submission Showcase | Yeaman Bhuiyan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Highlight.js (Dark Theme) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0f111a;
+            color: #e2e8f0;
+        }
+        
+        pre code.hljs {
+            border-radius: 0.75rem;
+            padding: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            background-color: #1a1b26;
+            border: 1px solid #2f334d;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Custom scrollbar for code block */
+        pre::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: #1a1b26; 
+            border-radius: 8px;
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: #414868; 
+            border-radius: 8px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: #565f89; 
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+
+    <main class="max-w-5xl w-full space-y-8">
+        
+        <!-- Page Header -->
+        <div class="space-y-2">
+            <h1 class="text-3xl font-bold text-white tracking-tight">Kaggle Competition: House Prices</h1>
+            <p class="text-gray-400">Advanced Regression Techniques Submission Details</p>
+        </div>
+
+        <!-- Kaggle Scoreboard UI -->
+        <div class="bg-[#1e2030] rounded-2xl border border-[#2f334d] overflow-hidden shadow-2xl">
+            <!-- Top Row: User & Stats -->
+            <div class="p-6 sm:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex items-center gap-6">
+                    <div class="flex flex-col items-center justify-center text-center">
+                        <span class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Rank</span>
+                        <span class="text-2xl font-bold text-gray-300">290</span>
+                    </div>
+                    
+                    <div class="h-10 w-px bg-[#2f334d] hidden sm:block"></div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-500 p-[2px]">
+                            <img src="https://ui-avatars.com/api/?name=Yeaman+Bhuiyan&background=1e2030&color=fff&bold=true" alt="Yeaman Bhuiyan" class="w-full h-full rounded-full border border-[#1e2030]">
+                        </div>
+                        <h2 class="text-xl font-semibold text-white">Yeaman Bhuiyan</h2>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-8 w-full sm:w-auto justify-between sm:justify-end">
+                    <div class="text-left sm:text-right">
+                        <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Score</p>
+                        <p class="text-2xl font-mono font-bold text-cyan-400">14132.38565</p>
+                    </div>
+                    <div class="text-right hidden sm:block">
+                        <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Entries</p>
+                        <p class="text-lg font-medium text-gray-300">5</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Row: Personal Best -->
+            <div class="bg-gradient-to-r from-blue-900/40 to-cyan-900/40 border-t border-[#2f334d] p-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3 text-sm sm:text-base">
+                    <div class="bg-[#1e2030] p-1.5 rounded-lg border border-[#2f334d] shadow-sm flex items-center justify-center">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <p class="text-blue-100">
+                        New personal best! Your latest submission scored <span class="font-bold text-white">14132.38565</span>, improving on your previous best of 14421.52040.
+                    </p>
+                </div>
+                <button class="shrink-0 px-5 py-2 text-sm font-semibold rounded-full border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 hover:text-white transition-colors duration-200">
+                    Tweet this
+                </button>
+            </div>
+        </div>
+
+        <!-- Code Section -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between px-2">
+                <h3 class="text-lg font-semibold text-gray-300 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    Model Implementation
+                </h3>
+                <span class="text-sm font-mono text-gray-500 bg-[#1e2030] px-3 py-1 rounded-md border border-[#2f334d]">model.py</span>
+            </div>
+            
+            <pre class="w-full overflow-x-auto"><code class="language-python">import pandas as pd
+import numpy as np
+from xgboost import XGBRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+
+# Load train and test data as DataFrame
+test_data = pd.read_csv("test.csv").set_index("Id")
+train_data = pd.read_csv("train.csv").set_index("Id")
+
+#Removing outliers
+train_data = train_data.drop(train_data[(train_data['GrLivArea'] > 4000) & (train_data['SalePrice'] < 300000)].index)
+train_data['LotFrontage'] = train_data.groupby('Neighborhood')['LotFrontage'].transform(lambda x: x.fillna(x.median()))
+test_data['LotFrontage'] = test_data.groupby('Neighborhood')['LotFrontage'].transform(lambda x: x.fillna(x.median()))
+
+# Drop SalePrice column from independent variables
+X = train_data.drop(['SalePrice'], axis=1)
+X = pd.get_dummies(X)
+
+# Get test dataset
+X_test = test_data.copy()
+X_test = pd.get_dummies(X_test)
+
+# Match columns of test data with train data
+X_test = X_test.reindex(columns=X.columns, fill_value=0)
+
+
+# Prediction column
+y = train_data['SalePrice']
+
+# Creating Regressor model
+model = XGBRegressor(
+    n_estimators=500,       # Number of decision trees to build
+    learning_rate=0.05,     # Step size shrinkage to prevent overfitting
+    max_depth=5,            # Maximum depth of each tree
+    random_state=42         # Random value 
+)
+
+# Adding train data
+model.fit(X,y)
+
+# predicting values on train data
+prediction = model.predict(X_test)
+
+# Final submission as csv file
+submission = pd.DataFrame({"Id": X_test.index, "SalePrice": prediction})
+
+# Saving submission and print conformation
+submission.to_csv("Submission.csv", index=False)
+print("Submission Saved")</code></pre>
+        </section>
+
+    </main>
+
+    <!-- Initialize Syntax Highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
+</body>
+</html>
